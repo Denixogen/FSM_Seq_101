@@ -15,13 +15,14 @@ Designer Engineer:
 Date:
  31 Mar 2026				
 ------------------------------------------*/
-module seq_101(out,state,in,clk,rst_n);
+module seq_101(out,state,clk_led,in,clk_50,rst_n);
  //ports
- input      	  in;
- input      	  clk;
- input      	  rst_n;
- output reg 	  out;
+ input      	   in;
+ input      	   clk_50;
+ input      	   rst_n;
+ output reg 	   out;
  output reg [1:0] state;
+ output           clk_led;
  
  // state assignments
  parameter [1:0] S0 = 2'b00;
@@ -30,6 +31,18 @@ module seq_101(out,state,in,clk,rst_n);
  parameter [1:0] S3 = 2'b11;
  reg [1:0] nxt;
  reg [1:0] pre;
+ 
+ 
+ 
+ // 150MHz converting from 50MHz to implement 3s tick
+ clk_div #(.ticksAt3Sec(150_000_000)) div(
+   .clkOut(clk),
+    .clkOut2(clk_led),
+    .clkIn(clk_50)
+    );
+ 
+ 
+ 
  
  // input block
  always @(in,pre)begin

@@ -10,23 +10,23 @@ z2
 cModel Technology
 dC:/intelFPGA/20.1
 vseq_101
-!s110 1774928064
+!s110 1775373688
 !i10b 1
 !s100 aZ9HIS]n8YX][oGMdCVPG3
 Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IZZ`ULI5j;fznL>no1TNe>2
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/FSM_demo/FSM_Demo/FSM_Seq_101
-w1774928061
+w1775373224
 8C:/FSM_demo/FSM_Demo/FSM_Seq_101/seq_101.v
 FC:/FSM_demo/FSM_Demo/FSM_Seq_101/seq_101.v
-!i122 3
+!i122 4
 L0 18 61
 Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1774928064.000000
+!s108 1775373688.000000
 !s107 C:/FSM_demo/FSM_Demo/FSM_Seq_101/seq_101.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/FSM_demo/FSM_Demo/FSM_Seq_101/seq_101.v|
 !i113 1

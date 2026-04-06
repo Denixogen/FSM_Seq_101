@@ -1,76 +1,9 @@
-# Compile of seq_101.v was successful.
-# Compile of testbench.v was successful.
-# 2 compiles, 0 failed with no errors.
 vsim work.testbench
 # vsim work.testbench 
-# Start time: 11:13:08 on Mar 31,2026
+# Start time: 16:53:34 on Apr 06,2026
 # Loading work.testbench
 # Loading work.seq_101
 add wave -position insertpoint sim:/testbench/dut/*
-# can't read "Startup(-L)": no such element in array
-# Load canceled
-# can't read "Startup(-L)": no such element in array
-# Load canceled
-# can't read "Startup(-L)": no such element in array
-# Load canceled
-# can't read "Startup(-L)": no such element in array
-# Load canceled
 run
-# can't read "Startup(-L)": no such element in array
-# Load canceled
-quit -sim
-# End time: 11:21:37 on Mar 31,2026, Elapsed time: 0:08:29
-# Errors: 0, Warnings: 6
-# can't read "Startup(-L)": no such element in array
-# Load canceled
-vsim work.testbench
-# vsim work.testbench 
-# Start time: 11:28:19 on Mar 31,2026
-# Loading work.testbench
-# Loading work.seq_101
-run
-vsim work.testbench
-# End time: 11:30:35 on Mar 31,2026, Elapsed time: 0:02:16
+# End time: 16:54:52 on Apr 06,2026, Elapsed time: 0:01:18
 # Errors: 0, Warnings: 1
-# vsim work.testbench 
-# Start time: 11:30:36 on Mar 31,2026
-# Loading work.testbench
-# Loading work.seq_101
-# Compile of seq_101.v failed with 2 errors.
-# Compile of testbench.v was successful.
-# 2 compiles, 1 failed with 2 errors.
-# Compile of seq_101.v failed with 2 errors.
-# Compile of seq_101.v failed with 2 errors.
-vsim work.testbench
-# End time: 11:32:49 on Mar 31,2026, Elapsed time: 0:02:13
-# Errors: 0, Warnings: 4
-# vsim work.testbench 
-# Start time: 11:32:49 on Mar 31,2026
-# Loading work.testbench
-# Loading work.seq_101
-# ** Error (suppressible): (vsim-3389) Port 'state' not found in the connected module (2nd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut File: C:/FSM_demo/FSM_Demo/FSM_Seq_101/testbench.v Line: 11
-# Error loading design
-# End time: 11:32:49 on Mar 31,2026, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 1
-vsim work.testbench
-# vsim work.testbench 
-# Start time: 11:32:54 on Mar 31,2026
-# Loading work.testbench
-# Loading work.seq_101
-# ** Error (suppressible): (vsim-3389) Port 'state' not found in the connected module (2nd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut File: C:/FSM_demo/FSM_Demo/FSM_Seq_101/testbench.v Line: 11
-# Error loading design
-# End time: 11:32:54 on Mar 31,2026, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 1
-# Compile of seq_101.v failed with 2 errors.
-# Compile of seq_101.v was successful.
-vsim work.testbench
-# vsim work.testbench 
-# Start time: 11:34:28 on Mar 31,2026
-# Loading work.testbench
-# Loading work.seq_101
-add wave -position insertpoint sim:/testbench/dut/*
-run
-# End time: 11:39:00 on Mar 31,2026, Elapsed time: 0:04:32
-# Errors: 0, Warnings: 3
