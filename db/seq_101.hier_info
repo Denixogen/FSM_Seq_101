@@ -1,48 +1,61 @@
-|seq_101
+|top_seq_101
+clkOut << <GND>
+state[0] << seq_101:seq_101_inst.state
+state[1] << seq_101:seq_101_inst.state
+clkOut2 << clk_div:clk_div_inst.clkOut2
+in => in.IN1
+clkIn => clkIn.IN1
+rst_n => rst_n.IN1
+
+
+|top_seq_101|clk_div:clk_div_inst
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clkOut2 <= clkOut2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clkIn => tick_cnt[0].CLK
+clkIn => tick_cnt[1].CLK
+clkIn => tick_cnt[2].CLK
+clkIn => tick_cnt[3].CLK
+clkIn => tick_cnt[4].CLK
+clkIn => tick_cnt[5].CLK
+clkIn => tick_cnt[6].CLK
+clkIn => tick_cnt[7].CLK
+clkIn => tick_cnt[8].CLK
+clkIn => tick_cnt[9].CLK
+clkIn => tick_cnt[10].CLK
+clkIn => tick_cnt[11].CLK
+clkIn => tick_cnt[12].CLK
+clkIn => tick_cnt[13].CLK
+clkIn => tick_cnt[14].CLK
+clkIn => tick_cnt[15].CLK
+clkIn => tick_cnt[16].CLK
+clkIn => tick_cnt[17].CLK
+clkIn => tick_cnt[18].CLK
+clkIn => tick_cnt[19].CLK
+clkIn => tick_cnt[20].CLK
+clkIn => tick_cnt[21].CLK
+clkIn => tick_cnt[22].CLK
+clkIn => tick_cnt[23].CLK
+clkIn => tick_cnt[24].CLK
+clkIn => tick_cnt[25].CLK
+clkIn => tick_cnt[26].CLK
+clkIn => tick_cnt[27].CLK
+clkIn => tick_cnt[28].CLK
+clkIn => tick_cnt[29].CLK
+clkIn => tick_cnt[30].CLK
+clkIn => tick_cnt[31].CLK
+clkIn => clkOut2~reg0.CLK
+clkIn => clkOut~reg0.CLK
+
+
+|top_seq_101|seq_101:seq_101_inst
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 state[0] <= state.DB_MAX_OUTPUT_PORT_TYPE
 state[1] <= state.DB_MAX_OUTPUT_PORT_TYPE
-clk_led <= clk_div:div.clkOut2
 in => nxt.S3.DATAB
 in => Selector1.IN1
 in => Selector0.IN1
 in => nxt.S2.DATAB
-clk_50 => clk_50.IN1
+clk => pre~1.DATAIN
 rst_n => pre~3.DATAIN
-
-
-|seq_101|clk_div:div
-clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clkOut2 <= clkOut2~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clkIn => tickCount[0].CLK
-clkIn => tickCount[1].CLK
-clkIn => tickCount[2].CLK
-clkIn => tickCount[3].CLK
-clkIn => tickCount[4].CLK
-clkIn => tickCount[5].CLK
-clkIn => tickCount[6].CLK
-clkIn => tickCount[7].CLK
-clkIn => tickCount[8].CLK
-clkIn => tickCount[9].CLK
-clkIn => tickCount[10].CLK
-clkIn => tickCount[11].CLK
-clkIn => tickCount[12].CLK
-clkIn => tickCount[13].CLK
-clkIn => tickCount[14].CLK
-clkIn => tickCount[15].CLK
-clkIn => tickCount[16].CLK
-clkIn => tickCount[17].CLK
-clkIn => tickCount[18].CLK
-clkIn => tickCount[19].CLK
-clkIn => tickCount[20].CLK
-clkIn => tickCount[21].CLK
-clkIn => tickCount[22].CLK
-clkIn => tickCount[23].CLK
-clkIn => tickCount[24].CLK
-clkIn => tickCount[25].CLK
-clkIn => tickCount[26].CLK
-clkIn => tickCount[27].CLK
-clkIn => clkOut2~reg0.CLK
-clkIn => clkOut~reg0.CLK
 
 

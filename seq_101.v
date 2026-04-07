@@ -15,31 +15,24 @@ Designer Engineer:
 Date:
  31 Mar 2026				
 ------------------------------------------*/
-module seq_101(out,state,clk_led,in,clk_50,rst_n);
+module seq_101(out,state,in,clk,rst_n);
  //ports
  input      	   in;
- input      	   clk_50;
+ input      	   clk;
  input      	   rst_n;
  output reg 	   out;
  output reg [1:0] state;
- output           clk_led;
  
  // state assignments
  parameter [1:0] S0 = 2'b00;
  parameter [1:0] S1 = 2'b01;
  parameter [1:0] S2 = 2'b10;
  parameter [1:0] S3 = 2'b11;
+ 
  reg [1:0] nxt;
  reg [1:0] pre;
  
  
- 
- // 150MHz converting from 50MHz to implement 3s tick
- clk_div #(.ticksAt3Sec(150_000_000)) div(
-   .clkOut(clk),
-    .clkOut2(clk_led),
-    .clkIn(clk_50)
-    );
  
  
  
@@ -48,9 +41,9 @@ module seq_101(out,state,clk_led,in,clk_50,rst_n);
  always @(in,pre)begin
 	case(pre)
 		S0: nxt = in? S1:S0;
-		S1: nxt = in? S1:S2;
-		S2: nxt = in? S3:S0;
-		S3: nxt = in? S1:S0;
+		S1: nxt = in? S1:S2;  // remembers 1
+		S2: nxt = in? S3:S0;  // 
+		S3: nxt = in? S1:S0;  //
 		default: nxt = S0;
 	endcase
  end
