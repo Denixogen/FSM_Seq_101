@@ -2,7 +2,7 @@
 			         SEQUENCE 101
 ==========================================
 description:
-This Moore FSM detects the non-overlapping 
+This Moore FSM detects the overlapping 
 sequence 101, assuming the input stream 
 arrive LSB- first.
 
@@ -24,10 +24,10 @@ module seq_101(out,state,in,clk,rst_n);
  output reg [1:0] state;
  
  // state assignments
- parameter [1:0] S0 = 2'b00;
- parameter [1:0] S1 = 2'b01;
- parameter [1:0] S2 = 2'b10;
- parameter [1:0] S3 = 2'b11;
+ localparam [1:0] S0 = 2'b00;
+ localparam [1:0] S1 = 2'b01;
+ localparam [1:0] S2 = 2'b10;
+ localparam [1:0] S3 = 2'b11;
  reg [1:0] nxt;
  reg [1:0] pre;
  
@@ -37,7 +37,7 @@ module seq_101(out,state,in,clk,rst_n);
 		S0: nxt = in? S1:S0;
 		S1: nxt = in? S1:S2;
 		S2: nxt = in? S3:S0;
-		S3: nxt = in? S1:S0;
+		S3: nxt = in? S1:S2;
 		default: nxt = S0;
 	endcase
  end

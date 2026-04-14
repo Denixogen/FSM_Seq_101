@@ -21,10 +21,22 @@ module testbench;
  always #1 clk = ~clk;
  
  initial begin
-	rst_n = 0; in = 1; #6;
-	rst_n = 1; in = 1; #2;
-	rst_n = 1; in = 0; #2;
-	rst_n = 1; in = 1; #2;
-	rst_n = 1; in = 0; #2;
+	rst_n = 0;
+	repeat(3) @(negedge clk);
+	rst_n = 1;
+	
+	in=1; @(negedge clk); 
+	in=0; @(negedge clk);
+	in=1; @(negedge clk);
+	in=0; @(negedge clk);
+	in=1; @(negedge clk);
+	in=1; @(negedge clk);
+	in=0; @(negedge clk);
+	in=0; @(negedge clk);
+
+
+
+	
+	
  end
 endmodule
